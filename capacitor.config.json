@@ -1,0 +1,6 @@
+{
+  "appId": "com.personal.sprint47",
+  "appName": "47天国考冲刺管理系统",
+  "webDir": "dist-android",
+  "server": { "androidScheme": "https" }
+}

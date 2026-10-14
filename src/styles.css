@@ -1,0 +1,37 @@
+@import "tailwindcss";
+
+@theme { --font-sans: "Inter", "PingFang SC", "Microsoft YaHei", system-ui, sans-serif; }
+:root { font-family: var(--font-sans); color: #17243c; background: #f6f8fc; font-synthesis: none; color-scheme: light; -webkit-text-size-adjust: 100%; }
+body { margin: 0; min-width: 320px; }
+html { scroll-padding-bottom: 120px; }
+input, textarea, select { scroll-margin-top: 24px; scroll-margin-bottom: 120px; }
+input[type="date"] { appearance: none; -webkit-appearance: none; min-inline-size: 0; }
+input[type="date"]::-webkit-date-and-time-value { text-align: inherit; }
+textarea { resize: vertical; }
+.app-header { padding-top: env(safe-area-inset-top, 0px); }
+.app-content { padding-bottom: calc(112px + env(safe-area-inset-bottom, 0px)); outline: none; }
+.app-header > div, .app-content { padding-left: max(20px, env(safe-area-inset-left, 0px)); padding-right: max(20px, env(safe-area-inset-right, 0px)); }
+.skip-link { position: fixed; left: 16px; top: -80px; z-index: 50; padding: 12px; border-radius: 8px; background: white; color: #2563eb; }
+.skip-link:focus { top: 16px; }
+[data-keyboard-open="true"] .bottom-nav { display: none; }
+[data-keyboard-open="true"] .app-content { padding-bottom: 32px; }
+.bottom-nav > div { padding-left: max(12px, env(safe-area-inset-left, 0px)); padding-right: max(12px, env(safe-area-inset-right, 0px)); }
+button { cursor: pointer; -webkit-tap-highlight-color: transparent; }
+button:disabled { cursor: default; opacity: .45; }
+button:focus-visible { outline: 3px solid #60a5fa; outline-offset: 3px; }
+.field { width: 100%; min-width: 0; min-height: 44px; padding: 10px 12px; border: 1px solid #cbd5e1; border-radius: 10px; background: white; font-size: 16px; color: #17243c; }
+.field:focus-visible { outline: 2px solid #60a5fa; outline-offset: 2px; }
+.primary-button, .secondary-button { min-height: 44px; padding: 10px 14px; border-radius: 10px; font-size: 13px; font-weight: 500; }
+.primary-button { color: white; background: #2563eb; }
+.secondary-button { color: #475569; background: white; border: 1px solid #e2e8f0; }
+.hero { position: relative; overflow: hidden; padding: 28px 24px 26px; border: 1px solid #dfe9fb; border-radius: 24px; background: linear-gradient(125deg, #eff5ff 0%, #f9fbff 75%); }
+.hero > :not(.hero-number) { position: relative; z-index: 1; }
+.eyebrow { display: inline-flex; align-items: center; gap: 7px; color: #4b74b4; font-size: 10px; font-weight: 600; letter-spacing: 1.4px; }
+.hero-number { position: absolute; right: -15px; bottom: -49px; color: #2563eb; opacity: .045; font-size: 185px; font-weight: 800; line-height: 1; pointer-events: none; }
+.card { border: 1px solid #e8edf5; background: white; border-radius: 18px; padding: 20px; box-shadow: 0 3px 14px #17243c03; }
+.card-label { font-size: 12px; color: #64748b; }
+.bottom-nav { position: fixed; z-index: 20; bottom: 0; left: 0; right: 0; border-top: 1px solid #e8edf5; background: #fffffffa; padding: 8px 0 max(8px, env(safe-area-inset-bottom)); }
+.nav-item { display: flex; min-height: 56px; flex-direction: column; align-items: center; justify-content: center; gap: 5px; border-radius: 14px; color: #8290a7; font-size: 11px; }
+.nav-active { color: #2563eb; background: #eff5ff; font-weight: 600; }
+@media (max-width: 360px) { .hero { padding: 24px 16px; } .card { padding: 16px; } .app-header > div, .app-content { padding-left: max(14px, env(safe-area-inset-left, 0px)); padding-right: max(14px, env(safe-area-inset-right, 0px)); } .primary-button, .secondary-button { padding: 10px 12px; } }
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { scroll-behavior: auto !important; animation: none !important; transition: none !important; } }

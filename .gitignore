@@ -1,0 +1,12 @@
+node_modules/
+dist/
+dist-android/
+artifacts/
+android/.gradle/
+android/local.properties
+android/**/build/
+*.jks
+*.keystore
+android-build.local.json
+.pnpm-store/
+*.local
